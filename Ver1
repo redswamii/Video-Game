@@ -1,0 +1,20 @@
+import assets
+import os
+
+assets.class_types()
+
+class_type_list = ["mage", "warrior", "rogue"]
+user_input = input("Select a class: ").lower().strip()
+while user_input not in class_type_list:
+    user_input = input("Select a class: ")
+
+print("You have selected the class: {}".format(user_input))
+
+assets.spell_types()
+
+spell_type_list = ["fire", "earth", "wind", "nature"]
+user_input = input("Select spell type: ").lower().strip()
+while user_input not in spell_type_list:
+    user_input = input("Select a spell type: ")
+
+print("You have chosen Fire, and will start with the spell Fireball!: {}".format(user_input))
