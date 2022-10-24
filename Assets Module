@@ -1,15 +1,42 @@
+import random
+import os
+import math
+import time
+
 f = open("character_menu_template", 'w')
 f.write("Name: \nClass: \nSpells(s): \nWeapons(s): ")
 f.write("\nArmor Type: \n Head Armor: \n Chest Armor: \n Arms Armor: \n Legs Armor: \n Feet Armor: ")
 f.close()
 
-def x():
-    print("")
+f = open("character_mana_resource", 'w')
+f.write("Health 100/100 Mana 100/100")
+f.close()
+
+f = open("character_energy_resource", 'w')
+f.write("Health 100/100 Rage 100/100")
+f.close()
+
+f = open("character_rage_resource", 'w')
+f.write("Health 100/100 Energy 100/100")
+f.close()
+
+class class_types:
+  def __init__(self, mage_class, warrior_class, rogue_class):
+    self.mage_class = mage_class
+    self.warrior_class = warrior_class
+    self.rogue_class = rogue_class
+p = class_types("Mage", "Warrior", "Rogue")
+print(p.mage_class)
+print(p.warrior_class)
+print(p.rogue_class)
+    def class_type_list():
+        print("mage", "warrior", "rogue")
+
 
 #assets.class_types() used to call function
 def class_types():
     print("Mage | Warrior | Rogue")
-class_type_list = ["mage", "warrior", "rogue"]
+
 def class_mage():
     print("Mage")
 def class_warrior():
@@ -60,3 +87,19 @@ def weapon_range_type():
     print ("Bow | Slingshot")
 weapon_bow_list = ["bow"]
 weapon_slingshot_list = ["slingshot"]
+
+
+
+
+#terrain_types
+ # terrain_forest
+ # terrain_tundra
+ # terrain_desert
+ # terrain_ocean)
+
+#weather_types
+  #weather_rain
+ # weather_snowing
+ # weather_clearskies
+# weather_duststorm
+
