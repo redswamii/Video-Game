@@ -2,6 +2,10 @@ import assets
 import os
 import random
 import math
+import timeimport assets
+import os
+import random
+import math
 import time
 
 # clear = lambda: os.system('cls')
@@ -14,11 +18,11 @@ import time
 # f.close()
 
 user_input = input("Welcome to GAME! Press any button to continue!").lower().strip()
+#character_class = input
 
 assets.class_types()
 while user_input not in assets.class_type_list:
     user_input = input("Select a class: ").lower().strip()
-
 if user_input.lower().strip() == "mage":
     print("You have selected Mage.")
     assets.spell_types()
