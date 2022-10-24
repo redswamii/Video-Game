@@ -1,0 +1,21 @@
+import assets
+import os
+import random
+import math
+import time
+
+f = open("character_variables", 'w')
+f.close()
+
+character_class = input("Select a class: ").lower().strip()
+
+
+with open('character_variables', 'r') as file:
+    data = file.readlines()
+data[0] = f"Name: mt.nooman\n"
+with open('character_variables', 'w') as file:
+    file.writelines(data)
+with open('character_variables', 'r') as f:
+    f.seek(6)
+    print(f.readline())
+    f.close()
