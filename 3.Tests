@@ -1,0 +1,49 @@
+#test ran to append text to an existing text file
+#https://blog.finxter.com/how-to-print-the-content-of-a-txt-file-in-python/
+#https://stackoverflow.com/questions/4719438/editing-specific-line-in-text-file-in-python
+f = open("example.txt", 'r')
+f.close()
+
+with open('example.txt', 'r') as file:
+    data = file.readlines()
+print(data)
+data[1] = "Here is my modified Line 2\n"
+with open('example.txt', 'w') as file:
+    file.writelines(data)
+
+with open('example.txt', 'r') as file:
+    data = file.readlines()
+print(data)
+data[2] = "Here is my modified Line 2\n"
+with open('example.txt', 'w') as file:
+    file.writelines(data)
+
+
+#test ran to print user input to a specfic line in a file
+#https://stackoverflow.com/questions/52490109/python-how-do-i-put-print-statement-and-input-on-same-line
+user_input = input("What is your hero's name?: ").lower().strip()
+
+with open('character_menu_template', 'r') as file:
+    data = file.readlines()
+print(data)
+data[0] = f"Name: {user_input}\n"
+with open('character_menu_template', 'w') as file:
+    file.writelines(data)
+
+#test ran to implement classes/objects for cleaner code
+class character:
+  def __init__(self, character_class, character_spell, character_name):
+    self.character_class = character_class
+    self.character_spell = character_spell
+    self.character_name = character_name
+
+player = character("Mage", "Fire", "Hero")
+
+print(player.character_class)
+print(player.character_spell)
+print(player.character_name)
+
+#test calling class/def variables from assets module
+import assets
+
+print(f"Name: {assets.init.mage_class}")
