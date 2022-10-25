@@ -1,0 +1,256 @@
+List Variable
+
+#!/usr/bin/env python
+
+
+#print without new line or on same line
+#https://sites.pitt.edu/~naraehan/python2/tutorial7.html
+print("Hello there!", end = ' ')
+print("It is a great day.")
+
+>>> print 'apple\torange'
+apple	orange
+>>> print 'apple\norange'
+apple
+orange
+
+
+#built in python functions no import required
+#https://docs.python.org/3/library/functions.html
+
+
+#list and how to print
+#https://developers.google.com/edu/python/lists
+colors = ['red', 'blue', 'green']
+print(colors[0])  ## red
+print(colors[2])  ## green
+print(len(colors))  ## 3
+
+
+#print none or null void
+#https://www.w3schools.com/python/ref_keyword_none.asp
+x = None
+
+print(x)
+
+
+#modules used
+Random - https://www.w3schools.com/python/module_random.asp
+         https://docs.python.org/3/library/random.html
+
+
+#defining functions
+#https://www.digitalocean.com/community/tutorials/how-to-define-functions-in-python-3
+def class_types():
+    print("Mage | Warrior | Rogue")
+
+
+#multiple functions
+#https://www.earthdatascience.org/courses/intro-to-earth-data-science/write-efficient-python-code/functions-modular-code/write-functions-with-multiple-and-optional-parameters-in-python/
+
+def sum(a,b):
+    print(a+b)
+
+
+#calling variables from as module
+https://csatlas.com/python-import-file-module/
+
+
+#defining variables
+#https://www.w3schools.com/python/python_variables.asp
+def class_mage(mage):
+    print("Mage")
+
+
+#user input variable
+#https://www.w3schools.com/python/python_user_input.asp
+#https://pythonprogramminglanguage.com/user-input-python/
+#https://pynative.com/python-input-function-get-user-input/
+name = input("what is your name?: ")
+print("hello"+name)
+
+
+#import random https://www.w3schools.com/python/module_random.asp
+#Return a random element from a list:
+import random
+mylist = ["apple", "banana", "cherry"]
+print(random.choice(mylist))
+
+
+#if then
+if user_input.lower().strip() == "mage"
+
+else:
+    print("Wrong input answer")
+
+
+#clear screen
+#https://www.geeksforgeeks.org/clear-screen-python/
+#https://stackoverflow.com/questions/517970/how-to-clear-the-interpreter-console
+os.system('cls') #linux ('clear')
+clear = lambda: os.system('cls')
+clear()
+
+
+#while loops
+#https://appdividend.com/2022/01/06/python-while-else-loop/
+#https://bobbyhadz.com/blog/python-keep-asking-for-user-input-until-valid#:~:text=To%20keep%20asking%20for%20user,break%20out%20of%20the%20loop.
+data = 11
+
+while data < 19:
+    print(data)
+    data += 1
+else:
+    print("data is no longer less than 19"
+
+
+#While loop requesting valid response or repeat
+answers = ['alice', 'chris', 'bob']
+answer = None
+while answer not in answers:
+    answer = input('Enter your answer: ')
+
+print('Your answer was: {}'.format(answer))
+
+
+#infinite loop until answer inside list is given
+import assets
+import os
+
+assets.class_types()
+
+class_type_list = ["mage", "warrior", "rogue"]
+user_input = input("Select a class: ").lower().strip()
+while user_input not in class_type_list:
+    user_input = input("Select a class: ")
+
+print("You have selected the class: {}".format(user_input))
+
+
+#print or cat a file to terminal
+f = open('ascii.txt')
+content = f.read()
+print(content)
+f.close()
+
+
+#text borders
+print('_' * 60)
+
+
+#test
+import assets
+assets.class_types()
+
+class_type_list = ["mage", "warrior", "rogue"]
+while user_input not in class_type_list:
+    user_input = input("Select a class: ").lower().strip()
+print("You have selected the class: {}".format(user_input))
+
+
+#directory creation
+#https://www.geeksforgeeks.org/create-a-directory-in-python/
+
+
+#Create Text file
+#https://pynative.com/python-create-file/#:~:text=To%20create%20a%20file%20inside,%2FPynative%2Fdata%2Fsales.
+#https://www.pythontutorial.net/python-basics/python-create-text-file/
+#https://pynative.com/python-create-file/
+with open('readme.txt', 'w') as f:
+    f.write('Create a new text file!')
+
+
+#writing to file and creating a new line (or tabbing text)
+f = open("character_menu_template", 'w')
+f.write("Name: \nClass: \nSpells(s): \nWeapons(s): ")
+f.close()
+
+f = open('character_menu_template')
+content = f.read()
+print(content)
+f.close()
+
+#Replace Specific Line in File
+#https://www.geeksforgeeks.org/python-program-to-replace-specific-line-in-file/
+with open('example.txt', 'r', encoding='utf-8') as file:
+    data = file.readlines()
+
+print(data)
+data[1] = "Here is my modified Line 2\n"
+
+with open('example.txt', 'w', encoding='utf-8') as file:
+    file.writelines(data)
+
+#writing to the next line in text file (\n command)
+#https://stackoverflow.com/questions/6159900/correct-way-to-write-line-to-file
+with open('somefile.txt', 'a') as the_file:
+    the_file.write('Hello\n')
+
+
+#class/objects
+#https://www.w3schools.com/python/python_classes.asp
+class Person:
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+
+p1 = Person("John", 36)
+
+print(p1.name)
+print(p1.age)
+
+
+
+
+#test ran to append text to an existing text file
+#https://blog.finxter.com/how-to-print-the-content-of-a-txt-file-in-python/
+#https://stackoverflow.com/questions/4719438/editing-specific-line-in-text-file-in-python
+f = open("example.txt", 'r')
+f.close()
+
+with open('example.txt', 'r') as file:
+    data = file.readlines()
+print(data)
+data[1] = "Here is my modified Line 2\n"
+with open('example.txt', 'w') as file:
+    file.writelines(data)
+
+with open('example.txt', 'r') as file:
+    data = file.readlines()
+print(data)
+data[2] = "Here is my modified Line 2\n"
+with open('example.txt', 'w') as file:
+    file.writelines(data)
+
+
+#test ran to print user input to a specfic line in a file
+#https://stackoverflow.com/questions/52490109/python-how-do-i-put-print-statement-and-input-on-same-line
+user_input = input("What is your hero's name?: ").lower().strip()
+
+with open('character_menu_template', 'r') as file:
+    data = file.readlines()
+print(data)
+data[0] = f"Name: {user_input}\n"
+with open('character_menu_template', 'w') as file:
+    file.writelines(data)
+
+#test ran to implement classes/objects for cleaner code
+class character:
+  def __init__(self, character_class, character_spell, character_name):
+    self.character_class = character_class
+    self.character_spell = character_spell
+    self.character_name = character_name
+
+player = character("Mage", "Fire", "Hero")
+
+print(player.character_class)
+print(player.character_spell)
+print(player.character_name)
+
+#test calling class/def variables from assets module
+import assets
+
+print(f"Name: {assets.init.mage_class}")
+
+the ```character_example = input``` seems like it doesnt need to be their but if its not some of the variables..
+show as not defined until i put it in the beginning, even though it clearly changes as I input differing data into terminal
