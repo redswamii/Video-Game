@@ -1,0 +1,22 @@
+Lot of work to be done with adding more assets
+  terrain
+  weather
+  combat
+  give point values to spells/weapons
+  health/mana/energy pool for character
+  NPC's
+  locations
+  menu
+  inventory
+
+create a directory for all text files
+https://csatlas.com/python-import-file-module/
+
+
+code needs to be redone replacing user_input with actual usable(unique) variables for future use.
+
+change weapon types to variables to later call for inventory/loot/rewards for what a character would want
+weapon_type = input
+
+while loops around weapon select, incase user missspells weapon type
+
