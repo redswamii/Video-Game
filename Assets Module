@@ -25,26 +25,14 @@ class class_types:
     self.mage_class = mage_class
     self.warrior_class = warrior_class
     self.rogue_class = rogue_class
-p = class_types("Mage", "Warrior", "Rogue")
-print(p.mage_class)
-print(p.warrior_class)
-print(p.rogue_class)
-    def class_type_list():
-        print("mage", "warrior", "rogue")
 
+init = class_types("Mage", "Warrior", "Rogue")
 
-#assets.class_types() used to call function
-def class_types():
+def class_type_menu():
     print("Mage | Warrior | Rogue")
+class_type_list = ["mage", "warrior", "rogue"]
 
-def class_mage():
-    print("Mage")
-def class_warrior():
-    print("Warrior")
-def class_rogue():
-    print("Rogue")
-
-def spell_types():
+def spell_type_menu():
     print("Fire | Earth | Wind | Nature")
 spell_type_list = ["fire", "earth", "wind", "nature"]
 def spell_type_fire():
@@ -68,22 +56,22 @@ nature_type_list = ["Thornsuge"]
 def spell_thornsurge():
     print("Thornsurge")
 
-def weapon_types():
+def weapon_type_menu():
     print("Melee | Range")
 weapon_type_list = ["melee", "range"]
 weapon_melee_list = ["1hsword", "2hsword", "1hdagger"]
-def weapon_melee_type():
+def weapon_melee_type_menu():
     print("1hSword | 2hSword")
-def weapon_1h_type():
+def weapon_1h_type_menu():
     print("1hSword | 1hAxe | 1hDagger")
 weapon_1hsword_list = ["1hsword"]
 weapon_1haxe_list = ["1axe"]
 weapon_1hdagger_list = ["1hdagger"]
-def weapon_2h_type():
+def weapon_2h_type_menu():
     print("2hSword | 2hAxe")
 weapon_2hsword_list = ["2hsword"]
 weapon_2haxe_list = ["2haxe"]
-def weapon_range_type():
+def weapon_range_type_menu():
     print ("Bow | Slingshot")
 weapon_bow_list = ["bow"]
 weapon_slingshot_list = ["slingshot"]
