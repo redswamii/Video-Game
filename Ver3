@@ -1,0 +1,130 @@
+import assets
+
+user_input = input("Welcome to GAME! Press any button to continue!").lower().strip()
+
+character_class = input
+assets.class_type_menu()
+while character_class not in assets.class_type_list:
+    character_class = input("Select a class: ").lower().strip()
+if character_class.lower().strip() == "mage":
+    print("You have selected Mage.")
+    with open('character_menu_template', 'r') as file:
+        data = file.readlines()
+    print(data)
+    data[1] = "Class: Mage\n"
+    data[3] = "Weapon(s): 2hStaff\n"
+    data[4] = "Armor Type: Cloth\n"
+    data[5] = "Head Armor: Novice Cloth Hood\n"
+    data[6] = "Chest Armor: Novice Cloth Chest\n"
+    data[7] = "Arms Armor: Novice Cloth Arms\n"
+    data[8] = "Legs Armor: Novice Cloth Legs\n"
+    data[9] = "Feet Armor: Novice Cloth Feet\n"
+    with open('character_menu_template', 'w') as file:
+        file.writelines(data)
+
+    assets.spell_type_menu()
+    character_spell_type = input
+    while character_spell_type not in assets.spell_type_list:
+        character_spell_type = input("Select a spell type: ").lower().strip()
+    if character_spell_type.lower().strip() == "fire":
+        print("You have chosen Fire, and will start with the spell Fireball!")
+        with open('character_menu_template', 'r') as file:
+            data = file.readlines()
+        print(data)
+        data[2] = "Spell(s): Fireball\n"
+        with open('character_menu_template', 'w') as file:
+            file.writelines(data)
+    elif character_spell_type.lower().strip() == "earth":
+        print("You have chosen Earth, and will start with the spell Rocksmash!")
+        with open('character_menu_template', 'r') as file:
+            data = file.readlines()
+        print(data)
+        data[2] = "Spell(s): Rocksmash\n"
+        with open('character_menu_template', 'w') as file:
+            file.writelines(data)
+    elif character_spell_type.lower().strip() == "wind":
+        print("You have chosen Wind, and will start with the spell Windshear!")
+        with open('character_menu_template', 'r') as file:
+            data = file.readlines()
+        print(data)
+        data[2] = "Spell(s): Windshear\n"
+        with open('character_menu_template', 'w') as file:
+            file.writelines(data)
+    elif character_spell_type.lower().strip() == "nature":
+        print("You have chosen Nature, and will start with the spell Thornsurge!")
+        with open('character_menu_template', 'r') as file:
+            data = file.readlines()
+        print(data)
+        data[2] = "Spell(s): Thornsurge\n"
+        with open('character_menu_template', 'w') as file:
+            file.writelines(data)
+
+elif character_class.lower().strip() == "warrior":
+    print("You have selected Warrior.")
+    assets.weapon_melee_type_menu()
+    with open('character_menu_template', 'r') as file:
+        data = file.readlines()
+    print(data)
+    data[1] = "Class: Warrior\n"
+    data[2] = "Spell(s): n/a\n"
+    data[4] = "Armor Type: Plate\n"
+    data[5] = "Head Armor: Novice Plate Helmet\n"
+    data[6] = "Chest Armor: Novice Plate Chest\n"
+    data[7] = "Arms Armor: Novice Plate Arms\n"
+    data[8] = "Legs Armor: Novice Plate Legs\n"
+    data[9] = "Feet Armor: Novice Plate Feet\n"
+    with open('character_menu_template', 'w') as file:
+        file.writelines(data)
+        character_weapon = input
+    while character_weapon not in assets.weapon_melee_list:
+        character_weapon = input("Select a weapon: ").lower().strip()
+    with open('character_menu_template', 'r') as file:
+        data = file.readlines()
+    print(data)
+    data[3] = f"Weapon(s): {character_weapon}\n"
+    with open('character_menu_template', 'w') as file:
+        file.writelines(data)
+
+elif character_class.lower().strip() == "rogue":
+    print("You have selected Rogue.")
+    assets.weapon_type_menu()
+    with open('character_menu_template', 'r') as file:
+        data = file.readlines()
+    print(data)
+    data[1] = "Class: Rogue\n"
+    data[2] = "Spell(s): n/a\n"
+    data[4] = "Armor Type: Leather\n"
+    data[5] = "Head Armor: Novice Leather Helmet\n"
+    data[6] = "Chest Armor: Novice Leather Chest\n"
+    data[7] = "Arms Armor: Novice Leather Arms\n"
+    data[8] = "Legs Armor: Novice Leather Legs\n"
+    data[9] = "Feet Armor: Novice Leather Feet\n"
+    with open('character_menu_template', 'w') as file:
+        file.writelines(data)
+
+    character_weapon = input
+    while user_input not in assets.weapon_type_list:
+        user_input = input("Select a weapon type: ").lower().strip()
+    if user_input == "melee".lower().strip():
+        assets.weapon_1h_type_menu()
+        character_weapon = input("Select a 1h weapon: ")
+        data[3] = f"Weapon(s): {character_weapon}\n"
+        with open('character_menu_template', 'w') as file:
+            file.writelines(data)
+    elif user_input == "range".lower().strip():
+        assets.weapon_range_type_menu()
+        character_weapon = input("Select a Ranged Weapon: ")
+    with open('character_menu_template', 'r') as file:
+        data = file.readlines()
+    print(data)
+    data[3] = f"Weapon(s): {character_weapon}\n"
+    with open('character_menu_template', 'w') as file:
+        file.writelines(data)
+
+character_name = input("What is your hero's name?: ").lower().strip()
+with open('character_menu_template', 'r') as file:
+    data = file.readlines()
+print(data)
+data[0] = f"Name: {character_name}\n"
+with open('character_menu_template', 'w') as file:
+    file.writelines(data)
