@@ -1,4 +1,4 @@
-#test ran to append text to an existing text file
+#test1 ran to append text to an existing text file
 #https://blog.finxter.com/how-to-print-the-content-of-a-txt-file-in-python/
 #https://stackoverflow.com/questions/4719438/editing-specific-line-in-text-file-in-python
 f = open("example.txt", 'r')
@@ -19,7 +19,7 @@ with open('example.txt', 'w') as file:
     file.writelines(data)
 
 
-#test ran to print user input to a specfic line in a file
+#test2 ran to print user input to a specfic line in a file
 #https://stackoverflow.com/questions/52490109/python-how-do-i-put-print-statement-and-input-on-same-line
 user_input = input("What is your hero's name?: ").lower().strip()
 
@@ -30,7 +30,7 @@ data[0] = f"Name: {user_input}\n"
 with open('character_menu_template', 'w') as file:
     file.writelines(data)
 
-#test ran to implement classes/objects for cleaner code
+#test3 ran to implement classes/objects for cleaner code
 class character:
   def __init__(self, character_class, character_spell, character_name):
     self.character_class = character_class
@@ -43,7 +43,81 @@ print(player.character_class)
 print(player.character_spell)
 print(player.character_name)
 
-#test calling class/def variables from assets module
+#test4 calling class/def variables from assets module
 import assets
 
 print(f"Name: {assets.init.mage_class}")
+
+the ```character_example = input``` seems like it doesnt need to be their but if its not some of the variables..
+show as not defined until i put it in the beginning, even though it clearly changes as I input differing data into terminal
+
+#test5 practicing applying classes
+class current_location:
+  def __init__(self, town1_location, town2_location, city1_location, city2_location, farm1_location):
+    self.town1_location = town1_location
+    self.town2_location = town2_location
+    self.city1_location = city1_location
+    self.city2_location = city2_location
+    self.farm1_location = farm1_location
+
+current_location = current_location("Town1", "Town2", "City1", "City2", "Town1")
+
+print(current_location.town1_location)
+
+#test6 calling variables from game code and asset module to form a readable variant list
+character_location = (assets.locations_types.town1_location)
+
+print(assets.character_menu, end = '')
+print(character_location, end = ' | ')
+print(assets.character_health, end = '/100 Health ')
+print(assets.character_mana, '/100 Mana')
+
+#test7 def a while loop. Loops if then statements inside the while loop itself.
+import assets
+
+def test():
+    assets.location_buildings()
+
+    character_building_location = input
+    while character_building_location not in assets.location_buildings_list:
+        character_building_location = input("Select building: ").lower().strip()
+    if character_building_location.lower().strip() == "inn":
+        user_input = input("Would you like to rest in the inn?(y/n)").lower().strip()
+        if user_input == "y":
+            print("Rested.")
+        elif user_input == "n":
+            print("Leaving inn..")
+            test()
+
+    elif character_building_location.lower().strip() == "supplies":
+        user_input = input("Would you like to purchase supplies?(y/n)").lower().strip()
+        if user_input == "y":
+            print("purchased supplies.")
+        elif user_input == "n":
+            print("Leaving supplies..")
+            test()
+
+    elif character_building_location.lower().strip() == "quest board":
+        user_input = input("Would you like to start this quest?(y/n)").lower().strip()
+        if user_input == "y":
+            print("quest started.")
+        elif user_input == "n":
+            print("Leaving quest board..")
+            test()
+    elif character_building_location.lower().strip() == "guide":
+        user_input = input("Would you like help from the guide?(y/n)").lower().strip()
+        if user_input == "y":
+            print("guide started")
+        elif user_input == "n":
+            print("Leaving guide..")
+            test()
+
+test()
+
+#test8 bring variable outside of a loop
+#saved variable to a text file inside of the loop to call the file outside the loop
+with open('saved_variables', 'r') as file:
+    data = file.readlines()
+print(data[0])
+with open('saved_variables', 'w') as file:
+    file.writelines(data)
