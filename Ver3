@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import assets
 
 user_input = input("Welcome to GAME! Press any button to continue!").lower().strip()
