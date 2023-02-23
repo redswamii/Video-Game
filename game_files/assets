@@ -1,0 +1,50 @@
+# hero
+
+# classes
+def CLASS_menu():
+    print('Mage | Warrior | Rogue')
+CLASS_list = ('Mage', 'Warrior', 'Rogue')
+
+# leveling/exp
+# weapons
+weapon_type_list = ('Melee', 'Range')
+weapon_melee_list = ()
+weapon_range_list =
+
+# armor
+armor_type_list = ()
+
+# spells
+spell_type_list = ('Fire', 'Frost', 'Earth', 'Wind')
+
+# abilities
+spell_fire_list = ()
+spell_frost_list = ()
+spell_earth_list = ()
+spell_wind_list = ()
+
+# traveling
+# walking
+# horse
+# date/time
+# terrain
+# weather
+
+# locations
+locations_farm_list = ('Farm1', 'Farm2', 'Farm3', )
+locations_town_list = ('Town1', 'Town2', 'Town3', )
+locations_city_list = ('City1', 'City2', 'City3', )
+
+# towns
+# cities
+# farms
+
+# ncs
+# item vendor
+# quest board
+# innkeeper
+
+# main story
+# quests
+# dungeons
+# easter eggs
