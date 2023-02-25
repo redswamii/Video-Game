@@ -1,1 +1,65 @@
+import assets
 
+character_name = input('What is your hero\'s name?: ')
+f = open('characterfile.txt', 'w')
+f.write(character_name)
+f.close()
+
+while True:
+
+    assets.CLASS_menu()
+    character_CLASS = input('Select Class: ').lower()
+
+    if character_CLASS == 'mage':
+        f = open('characterfile.txt', 'w')
+        f.write('Mage')
+        f.close()
+        break
+
+    elif character_CLASS == 'rogue':
+        f = open('characterfile.txt', 'w')
+        f.write('Rogue')
+        f.close()
+        break
+
+    elif character_CLASS == 'warrior':
+        f = open('characterfile.txt', 'w')
+        f.write('Warrior')
+        f.close()
+        break
+
+    else:
+        print('invalid')
+
+while True:
+
+    if character_CLASS == 'mage':
+        assets.spell_type_menu()
+        character_spell_type = input('Select your spell type: ').lower()
+
+        if character_spell_type == 'fire':
+            f = open('characterfile.txt', 'w')
+            f.write('Fire')
+            f.close()
+            break
+
+        elif character_spell_type == 'frost':
+            f = open('characterfile.txt', 'w')
+            f.write('Frost')
+            f.close()
+            break
+
+        elif character_spell_type == 'earth':
+            f = open('characterfile.txt', 'w')
+            f.write('Earth')
+            f.close()
+            break
+
+        elif character_spell_type == 'wind':
+            f = open('characterfile.txt', 'w')
+            f.write('Wind')
+            f.close()
+            break
+
+        else:
+            print('invalid')
