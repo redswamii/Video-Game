@@ -1,50 +1,42 @@
-# hero
-
-# classes
 def CLASS_menu():
     print('Mage | Warrior | Rogue')
+
 CLASS_list = ('Mage', 'Warrior', 'Rogue')
 
-# leveling/exp
-# weapons
+def weapon_type_menu():
+    print('Melee | Range')
+
 weapon_type_list = ('Melee', 'Range')
-weapon_melee_list = ()
-weapon_range_list =
 
-# armor
-armor_type_list = ()
+def weapon_melee_menu():
+    print('Axe | Dagger | Sword')
 
-# spells
+weapon_melee_list = ('Axe', 'Dagger', 'Sword', 'Spear', 'Staff')
+
+def weapon_range_menu():
+    print('Bow | Crossbow | Gun')
+
+weapon_range_list = ('Bow', 'Crossbow', 'Gun')
+
+def armor_type_menu():
+    print('Cloth | Leather | Plate')
+
+armor_type_list = ('Cloth', 'Leather', 'Plate')
+
+#armor_cloth_list =
+#armor_leather_list =
+#armor_plate_list =
+
+def spell_type_menu():
+    print('Fire | Frost | Earth | Wind')
+
 spell_type_list = ('Fire', 'Frost', 'Earth', 'Wind')
 
-# abilities
-spell_fire_list = ()
-spell_frost_list = ()
-spell_earth_list = ()
-spell_wind_list = ()
+#spell_fire_list = ()
+#spell_frost_list = ()
+#spell_earth_list = ()
+#spell_wind_list = ()
 
-# traveling
-# walking
-# horse
-# date/time
-# terrain
-# weather
-
-# locations
 locations_farm_list = ('Farm1', 'Farm2', 'Farm3', )
 locations_town_list = ('Town1', 'Town2', 'Town3', )
 locations_city_list = ('City1', 'City2', 'City3', )
-
-# towns
-# cities
-# farms
-
-# ncs
-# item vendor
-# quest board
-# innkeeper
-
-# main story
-# quests
-# dungeons
-# easter eggs
